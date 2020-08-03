@@ -2,11 +2,11 @@
 A function that can train a neural net
 '''
 
-from skynet.tensor import Tensor
-from skynet.nn import NeuralNet
-from skynet.optim import SGD, Optimizer
-from skynet.loss import Loss, MSE
-from skynet.data import DataIterator, BatchIterator 
+from tensor import Tensor
+from nn import NeuralNet
+from optim import SGD, Optimizer
+from loss import Loss, MSE
+from data import DataIterator, BatchIterator 
 
 def train(net: NeuralNet,
 	inputs: Tensor,
@@ -25,5 +25,6 @@ def train(net: NeuralNet,
 			net.backward(grad)
 			optimizer.step(net)
 		print(epoch, epoch_loss)
+	print("Final loss: ",epoch_loss)
 
 

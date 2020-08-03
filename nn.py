@@ -3,15 +3,15 @@ NN is a collection of layers
 '''
 from typing import Sequence, Iterator, Tuple
 import numpy as np
-from skynet.tensor import Tensor
-from skynet.layers import Layer
+from tensor import Tensor
+from layers import Layer
 
 class NeuralNet:
 	def __init__(self, layers: Sequence[Layer])->None:
 		self.layers = layers
 
 	def forward(self, inputs: Tensor)-> Tensor:
-		for layer in layers:
+		for layer in self.layers:
 			inputs = layer.forward(inputs)
 		return inputs
 
@@ -22,7 +22,7 @@ class NeuralNet:
 
 	def params_and_grads(self)->Iterator[Tuple[Tensor, Tensor]]:
 		for layer in self.layers:
-			for name, param in layer.param.items():
+			for name, param in layer.params.items():
 				grad = layer.grads[name]
 				yield param, grad
 

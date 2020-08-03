@@ -4,7 +4,7 @@ data.py provides a tool for iterating over data in batches
 '''
 
 import numpy as np
-from skynet.tensor import Tensor
+from tensor import Tensor
 from typing import Iterator, NamedTuple
 
 Batch = NamedTuple('Batch',[('inputs', Tensor),('targets', Tensor)])
@@ -29,5 +29,5 @@ class BatchIterator(DataIterator):
 		for start in starts:
 			end = start + self.batch_size
 			batch_inputs = inputs[start:end]
-			batch_targets = target[start:end]
+			batch_targets = targets[start:end]
 			yield Batch(batch_inputs, batch_targets)
