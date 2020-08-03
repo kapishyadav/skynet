@@ -3,7 +3,7 @@ loss function is used to measure the accuracy of the model.
 Here I'll be implementing the mean squared error loss function.
 '''
 import numpy as np
-from tensor import Tensor
+from skynet.tensor import Tensor
 
 class Loss:
     def loss(self, predicted: Tensor, actual: Tensor) -> float:

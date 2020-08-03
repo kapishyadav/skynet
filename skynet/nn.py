@@ -3,8 +3,8 @@ NN is a collection of layers
 '''
 from typing import Sequence, Iterator, Tuple
 import numpy as np
-from tensor import Tensor
-from layers import Layer
+from skynet.tensor import Tensor
+from skynet.layers import Layer
 
 class NeuralNet:
 	def __init__(self, layers: Sequence[Layer])->None:

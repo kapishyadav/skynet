@@ -2,11 +2,11 @@
 A function that can train a neural net
 '''
 
-from tensor import Tensor
-from nn import NeuralNet
-from optim import SGD, Optimizer
-from loss import Loss, MSE
-from data import DataIterator, BatchIterator 
+from skynet.tensor import Tensor
+from skynet.nn import NeuralNet
+from skynet.optim import SGD, Optimizer
+from skynet.loss import Loss, MSE
+from skynet.data import DataIterator, BatchIterator 
 
 def train(net: NeuralNet,
 	inputs: Tensor,

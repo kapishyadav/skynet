@@ -9,10 +9,10 @@ for each of the number 1 to 100:
 '''
 import numpy as np
 from typing import List
-from train import train
-from nn import NeuralNet
-from layers import Linear, Tanh, Sigmoid
-from optim import Optimizer, SGD
+from skynet.train import train
+from skynet.nn import NeuralNet
+from skynet.layers import Linear, Tanh, Sigmoid
+from skynet.optim import Optimizer, SGD
 
 
 def fizz_buzz_encode(x: int) -> List[int]:

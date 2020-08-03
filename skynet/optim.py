@@ -3,7 +3,7 @@ Optimizers are used to reduce the loss function
 by adjusting the parameters of out neural network 
 based on the gradient computed during backpropagation
 '''
-from nn import NeuralNet
+from skynet.nn import NeuralNet
 class Optimizer:
 	def step(self, net: NeuralNet)->None:
 		raise NotImplementedError
