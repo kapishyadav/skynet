@@ -24,7 +24,7 @@ def train(net: NeuralNet,
 			grad=loss.grad(predicted,batch.targets)
 			net.backward(grad)
 			optimizer.step(net)
-		print(epoch, epoch_loss)
-	print("Final loss: ",epoch_loss)
+		print("Epoch: ",epoch,"| Epoch Loss: ", epoch_loss)
+	
 
 
